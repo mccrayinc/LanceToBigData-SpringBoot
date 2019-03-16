@@ -1,0 +1,33 @@
+#port config
+server:
+  port: 8081
+
+spring:
+  #mysql config
+  datasource:
+    url: jdbc:mysql://139.9.4.13:3306/mry?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: mrysietest
+    password: sietest$2099
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    ##druid config
+    druid:
+      #初始化时建立物理连接的个数
+      initial-size: 3
+      #最小连接池数量
+      min-idle: 3
+      #最大连接池数量
+      max-active: 10
+      #获取连接时最大等待时间
+      max-wait: 60000
+      stat-view-servlet:
+        #配置监控页面访问登录名称
+        login-username: admin
+        #配置监控页面访问密码
+        login-password: admin
+      filter:
+        stat:
+          #是否开启慢sql查询监控
+          log-slow-sql: true
+          #慢SQL执行时间
+          slow-sql-millis: 1
