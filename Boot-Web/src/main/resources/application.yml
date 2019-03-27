@@ -5,29 +5,33 @@ server:
 spring:
   #mysql config
   datasource:
-    url: jdbc:mysql://139.9.4.13:3306/mry?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://139.9.4.13:3306/vit_siedev?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     type: com.alibaba.druid.pool.DruidDataSource
-    username: mrysietest
-    password: sietest$2099
+    username: vit_siedev
+    password: vit_siedev$2019
     driver-class-name: com.mysql.cj.jdbc.Driver
     ##druid config
     druid:
-      #³õÊ¼»¯Ê±½¨Á¢ÎïÀíÁ¬½ÓµÄ¸öÊı
+      #åˆå§‹åŒ–æ—¶å»ºç«‹ç‰©ç†è¿æ¥çš„ä¸ªæ•°
       initial-size: 3
-      #×îĞ¡Á¬½Ó³ØÊıÁ¿
+      #æœ€å°è¿æ¥æ± æ•°é‡
       min-idle: 3
-      #×î´óÁ¬½Ó³ØÊıÁ¿
+      #æœ€å¤§è¿æ¥æ± æ•°é‡
       max-active: 10
-      #»ñÈ¡Á¬½ÓÊ±×î´óµÈ´ıÊ±¼ä
+      #è·å–è¿æ¥æ—¶æœ€å¤§ç­‰å¾…æ—¶é—´
       max-wait: 60000
       stat-view-servlet:
-        #ÅäÖÃ¼à¿ØÒ³Ãæ·ÃÎÊµÇÂ¼Ãû³Æ
+        #é…ç½®ç›‘æ§é¡µé¢è®¿é—®ç™»å½•åç§°
         login-username: admin
-        #ÅäÖÃ¼à¿ØÒ³Ãæ·ÃÎÊÃÜÂë
+        #é…ç½®ç›‘æ§é¡µé¢è®¿é—®å¯†ç 
         login-password: admin
       filter:
         stat:
-          #ÊÇ·ñ¿ªÆôÂısql²éÑ¯¼à¿Ø
+          #æ˜¯å¦å¼€å¯æ…¢sqlæŸ¥è¯¢ç›‘æ§
           log-slow-sql: true
-          #ÂıSQLÖ´ĞĞÊ±¼ä
+          #æ…¢SQLæ‰§è¡Œæ—¶é—´
           slow-sql-millis: 1
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.lance.boot.web.entity
