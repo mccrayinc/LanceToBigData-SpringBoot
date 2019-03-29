@@ -20,6 +20,6 @@ public class UserController {
     @RequestMapping("/user")
     public User getUser(){
 
-        return userMapper.selectByPrimaryKey(123);
+        return null;
     }
 }
