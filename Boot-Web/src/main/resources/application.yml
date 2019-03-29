@@ -32,6 +32,20 @@ spring:
           #慢SQL执行时间
           slow-sql-millis: 1
 
+  #Hot deployment config
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.lance.boot.web.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
