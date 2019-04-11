@@ -24,7 +24,7 @@ public class UserController {
     @RequestMapping("/user")
     public User getUser() {
 
-        return null;
+        return userMapper.queryByUserId(123);
     }
 
     @GetMapping("/index")

@@ -14,6 +14,7 @@
     <modules>
         <module>Boot-Web</module>
         <module>Boot-Common</module>
+        <module>Boot-Shiro</module>
     </modules>
 
     <properties>
