@@ -15,6 +15,7 @@ public class IpConnectUtils {
 
     /**
      * 判断ip、端口是否可以连接
+     *
      * @param host
      * @param port
      * @return
@@ -38,6 +39,7 @@ public class IpConnectUtils {
 
     /**
      * 判断ip是否可以连接（timeout是超时时间） 是否可以ping通
+     *
      * @param host
      * @param timeOut
      * @return

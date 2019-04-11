@@ -5,11 +5,11 @@ server:
 spring:
   #mysql config
   datasource:
-    url: jdbc:mysql://139.9.4.13:3306/vit_siedev?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     type: com.alibaba.druid.pool.DruidDataSource
-    username: vit_siedev
-    password: vit_siedev$2019
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.9.4.13:3306/itdt_siedev?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: itdt_siedev
+    password: itdt_siedev$2019
     ##druid config
     druid:
       #初始化时建立物理连接的个数

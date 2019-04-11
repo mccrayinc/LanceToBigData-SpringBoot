@@ -61,17 +61,23 @@
         </dependency>
 
         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
 
- <!--       <dependency>
-            <groupId>com.lance.boot</groupId>
-            <artifactId>boot-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>-->
+        <!--       <dependency>
+                   <groupId>com.lance.boot</groupId>
+                   <artifactId>boot-common</artifactId>
+                   <version>0.0.1-SNAPSHOT</version>
+               </dependency>-->
 
     </dependencies>
 
@@ -99,7 +105,9 @@
                 <executions>
                     <execution>
                         <id>Generate MyBatis Artifacts</id>
-                        <goals><goal>generate</goal></goals>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
                     </execution>
                 </executions>
                 <dependencies>

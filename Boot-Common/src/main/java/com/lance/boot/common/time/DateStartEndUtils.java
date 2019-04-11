@@ -12,6 +12,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取当天的开始时间
+     *
      * @return
      */
     public static Date getDayBegin() {
@@ -25,6 +26,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取当天的结束时间
+     *
      * @return
      */
     public static Date getDayEnd() {
@@ -39,6 +41,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取昨天的开始时间
+     *
      * @return
      */
     public static Date getBeginDayOfYesterday() {
@@ -50,6 +53,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取昨天的结束时间
+     *
      * @return
      */
     public static Date getEndDayOfYesterDay() {
@@ -61,6 +65,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取明天的开始时间
+     *
      * @return
      */
     public static Date getBeginDayOfTomorrow() {
@@ -72,6 +77,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取明天的结束时间
+     *
      * @return
      */
     public static Date getEndDayOfTomorrow() {
@@ -83,6 +89,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取本周的开始时间
+     *
      * @return
      */
     public static Date getBeginDayOfWeek() {
@@ -102,9 +109,10 @@ public class DateStartEndUtils {
 
     /**
      * 获取本周的结束时间
+     *
      * @return
      */
-    public static Date getEndDayOfWeek(){
+    public static Date getEndDayOfWeek() {
         Calendar cal = Calendar.getInstance();
         cal.setTime(getBeginDayOfWeek());
         cal.add(Calendar.DAY_OF_WEEK, 6);
@@ -114,6 +122,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取本月的开始时间
+     *
      * @return
      */
     public static Date getBeginDayOfMonth() {
@@ -124,6 +133,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取本月的结束时间
+     *
      * @return
      */
     public static Date getEndDayOfMonth() {
@@ -136,6 +146,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取本年的开始时间
+     *
      * @return
      */
     public static Date getBeginDayOfYear() {
@@ -148,6 +159,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取本年的结束时间
+     *
      * @return
      */
     public static Date getEndDayOfYear() {
@@ -160,12 +172,13 @@ public class DateStartEndUtils {
 
     /**
      * 获取某个日期的开始时间
+     *
      * @param d
      * @return
      */
     public static Timestamp getDayStartTime(Date d) {
         Calendar calendar = Calendar.getInstance();
-        if(null != d){
+        if (null != d) {
             calendar.setTime(d);
         }
         calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
@@ -175,12 +188,13 @@ public class DateStartEndUtils {
 
     /**
      * 获取某个日期的结束时间
+     *
      * @param d
      * @return
      */
     public static Timestamp getDayEndTime(Date d) {
         Calendar calendar = Calendar.getInstance();
-        if(null != d) {
+        if (null != d) {
             calendar.setTime(d);
         }
         calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 23, 59, 59);
@@ -190,6 +204,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取今年是哪一年
+     *
      * @return
      */
     public static Integer getNowYear() {
@@ -201,6 +216,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取本月是哪一月
+     *
      * @return
      */
     public static int getNowMonth() {
@@ -212,6 +228,7 @@ public class DateStartEndUtils {
 
     /**
      * 两个日期相减得到的天数
+     *
      * @param beginDate
      * @param endDate
      * @return
@@ -220,13 +237,14 @@ public class DateStartEndUtils {
         if (beginDate == null || endDate == null) {
             throw new IllegalArgumentException("getDiffDays param is null!");
         }
-        long diff = (endDate.getTime() - beginDate.getTime())/ (1000 * 60 * 60 * 24);
+        long diff = (endDate.getTime() - beginDate.getTime()) / (1000 * 60 * 60 * 24);
         int days = new Long(diff).intValue();
         return days;
     }
 
     /**
      * 两个日期相减得到的毫秒数
+     *
      * @param beginDate
      * @param endDate
      * @return
@@ -239,6 +257,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取两个日期中的最大日期
+     *
      * @param beginDate
      * @param endDate
      * @return
@@ -258,6 +277,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取两个日期中的最小日期
+     *
      * @param beginDate
      * @param endDate
      * @return
@@ -277,11 +297,12 @@ public class DateStartEndUtils {
 
     /**
      * 返回某月该季度的第一个月
+     *
      * @param date
      * @return
      */
     public static Date getFirstSeasonDate(Date date) {
-        final int[] SEASON = { 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4 };
+        final int[] SEASON = {1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4};
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         int sean = SEASON[cal.get(Calendar.MONTH)];
@@ -291,6 +312,7 @@ public class DateStartEndUtils {
 
     /**
      * 返回某个日期下几天的日期
+     *
      * @param date
      * @param i
      * @return
@@ -304,6 +326,7 @@ public class DateStartEndUtils {
 
     /**
      * 返回某个日期前几天的日期
+     *
      * @param date
      * @param i
      * @return
@@ -317,6 +340,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取某年某月到某年某月按天的切片日期集合（间隔天数的日期集合）
+     *
      * @param beginYear
      * @param beginMonth
      * @param endYear
@@ -324,7 +348,7 @@ public class DateStartEndUtils {
      * @param k
      * @return
      */
-    public static List getTimeList(int beginYear, int beginMonth, int endYear,int endMonth, int k) {
+    public static List getTimeList(int beginYear, int beginMonth, int endYear, int endMonth, int k) {
         List list = new ArrayList();
         if (beginYear == endYear) {
             for (int j = beginMonth; j <= endMonth; j++) {
@@ -348,6 +372,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取某年某月按天切片日期集合（某个月间隔多少天的日期集合）
+     *
      * @param beginYear
      * @param beginMonth
      * @param k
@@ -368,6 +393,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取某年某月的第一天日期
+     *
      * @param year
      * @param month
      * @return
@@ -380,6 +406,7 @@ public class DateStartEndUtils {
 
     /**
      * 获取某年某月的最后一天日期
+     *
      * @param year
      * @param month
      * @return
