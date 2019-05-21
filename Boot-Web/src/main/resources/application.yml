@@ -1,6 +1,6 @@
 #port config
 server:
-  port: 8081
+  port: 8086
 
 spring:
   #mysql config
@@ -41,8 +41,8 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.lance.boot.web.entity
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 pagehelper:
   helperDialect: mysql

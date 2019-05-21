@@ -1,43 +1,28 @@
-package com.lance.boot.web.entity;
+package com.lance.boot.web.entity;/**
+ * @author: Lance(ZYH)
+ * @Date: 2019-04-27 21:24
+ * @Description:
+ */
 
+import org.apache.ibatis.annotations.Mapper;
+
+/**
+ * @author: 张银华 zhangyinhua@chinasie.com
+ * @Date: 2019-04-27 21:24
+ * @Description:
+ *
+ */
+@Mapper
 public class User {
-    private Integer userId;
+    private String id;
+    private String userId;
+    private String name;
 
-    private String userName;
-
-    private String password;
-
-    private String phone;
-
-    public Integer getUserId() {
-        return userId;
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone == null ? null : phone.trim();
+    public void setId(String id) {
+        this.id = id;
     }
 }
